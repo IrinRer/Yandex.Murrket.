@@ -60,6 +60,8 @@ class CreaterCards {
         n--;
       }
     };
+    
+    createStarsActive(5);
 
     const priceCat = addElementAddClass("p", null);
     priceCat.innerHTML = "Price: ";
