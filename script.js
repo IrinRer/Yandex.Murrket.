@@ -61,19 +61,6 @@ class CreaterCards {
       }
     };
 
-    createStarsActive(5);
-
-    // const createStarsNotActive = (n) => {
-    //   let num = 5 - n;
-    //   while (num) {
-    //     const levelItem = addElementAddClass("span", null);
-    //     levelWrapper.append(levelItem);
-    //     num--;
-    //   }
-    // };
-
-    // createStarsNotActive(this.level);
-
     const priceCat = addElementAddClass("p", null);
     priceCat.innerHTML = "Price: ";
     insertText(priceCat, this.price);
