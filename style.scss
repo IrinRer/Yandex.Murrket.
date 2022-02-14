@@ -1,0 +1,104 @@
+h1,
+h3 {
+  text-align: center;
+}
+
+h3 {
+  color: black;
+  font-size: 16px;
+  transition: font-size 500ms, color 700ms linear;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover {
+    cursor: pointer;
+    color: brown;
+  }
+}
+.wrapper__cards__card {
+  width: 20%;
+  display: inline-block;
+  margin: 15px;
+  border: 3px solid black;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.img-cat {
+  height: 40vh;
+  transition: opacity 300ms linear;
+
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
+
+.star-rating__wrap {
+  display: inline-block;
+  font-size: 1rem;
+
+  .star {
+    display: none;
+  }
+
+  .label-star {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+    float: right;
+
+    &::before {
+      content: "★";
+      color: rgb(189, 189, 189);
+    }
+  }
+}
+
+.label-star:hover::before,
+.label-star:hover ~ .label-star::before,
+.star:checked ~ .label-star::before {
+  content: "★";
+  color: gold;
+}
+
+input,
+label {
+  width: 30px;
+  height: 30px;
+}
+
+#input1:checked ~ .wrapper .wrapper__cards__card {
+  display: inline-block;
+
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:hover h3 {
+    font-size: 25px;
+    color: brown;
+  }
+}
+
+#input2:checked ~ .wrapper .wrapper__cards__card {
+  display: block;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+
+  h3 {
+    font-size: 20px;
+  }
+}
+
+#input2:checked ~ .wrapper .wrapper__cards__card .img-cat {
+  height: 70vh;
+}
